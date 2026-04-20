@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Solution</title>
+    <title>Solution — AutoBlinds</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
     <header>
-        <h1>Our Solution</h1>
+        <h1>AutoBlinds</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="team.html">Team</a>
@@ -18,31 +18,54 @@
             <a href="milestones.html">Milestones</a>
         </nav>
     </header>
- <main>
-    <section class="problem">
-        <h2>Quality Sketch or Draft CAD</h2>
-        <img src="assets/sketch1.png" alt="Quality sketch of the smart blinds system" style="width:50%;height:auto;display:block;margin-bottom:0.5rem;">
-        <img src="assets/sketch2.png" alt="CAD draft of the smart blinds system" style="width:50%;height:auto;display:block;margin-bottom:0.5rem;">
-        <img src="assets/motor.png" alt="Motor" style="width:50%;height:auto;display:block;margin-bottom:0.5rem;">
+    <main>
+        <section class="problem">
+            <h2>Design Sketches &amp; CAD</h2>
+            <div class="image-grid">
+                <img src="assets/sketch1.png" alt="Sketch 1 — smart blinds system">
+                <img src="assets/sketch2.png" alt="Sketch 2 — CAD draft">
+                <img src="assets/motor.png" alt="Motor component">
+            </div>
 
+            <div class="section-divider"></div>
 
-        <h2>What the tech will do</h2>
-        <ul>
-            <li>Attach to blinds</li>
-            <li>Opens or closes blinds</li>
-            <li>Can manually use, or set schedule to operate automatically</li>
-        </ul>
+            <h2>What It Does</h2>
+            <div class="feature-grid">
+                <div class="feature-chip">
+                    <span class="icon">🪟</span>
+                    Attaches to existing blinds
+                </div>
+                <div class="feature-chip">
+                    <span class="icon">⚡</span>
+                    Opens &amp; closes automatically
+                </div>
+                <div class="feature-chip">
+                    <span class="icon">📱</span>
+                    Manual or scheduled operation
+                </div>
+            </div>
 
-        <h2>Technological Aspects of Solution</h2>
-        <ul>
-            <li>Motor to open and close blinds</li>
-            <li>Design app that connects to the ESP32 through Bluetooth</li>
-            <li>Photoresistor for light sensing</li>
-        </ul>
-    </section>
-</main>
+            <div class="section-divider"></div>
+
+            <h2>Technology Stack</h2>
+            <div class="feature-grid">
+                <div class="feature-chip">
+                    <span class="icon">⚙️</span>
+                    Motor driver to control blinds
+                </div>
+                <div class="feature-chip">
+                    <span class="icon">📡</span>
+                    ESP32 via Bluetooth app
+                </div>
+                <div class="feature-chip">
+                    <span class="icon">💡</span>
+                    Photoresistor light sensing
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>&copy; SPR26 ECE196 Team</p>
+        <p>&copy; 2026 <strong>SPR26 ECE196 Team</strong> &nbsp;·&nbsp; UC San Diego</p>
     </footer>
 </body>
 </html>

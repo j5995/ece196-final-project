@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milestones</title>
+    <title>Milestones — AutoBlinds</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
     <header>
-        <h1>Milestones</h1>
+        <h1>AutoBlinds</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="team.html">Team</a>
@@ -20,20 +20,38 @@
     </header>
     <main>
         <section class="problem">
-            <h2>Timeline Figure</h2>
-            <img src="assets/timeline_figure.png" alt="Timeline Figure" style="width:100%;height:auto;display:block;margin-bottom:0.5rem;" />
+            <h2>Timeline</h2>
+            <img src="assets/timeline_figure.png" alt="Project Timeline Figure" style="width:100%;max-width:800px;height:auto;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow);margin-bottom:1rem;">
+
+            <div class="section-divider"></div>
+
             <h2>Project Milestones</h2>
-            <ul>
-                <li>May 1: PCB passes DRC and ERC (design and electrical rules checker)</li>
-                <li>May 8: 3D Printed design for case</li>
-                <li>May 22: Working SW App that communicates with device</li>
-                <li>May 24: Testing PCB opens and closes blinds</li>
-                <li>May 29: Testing full MVP system integration</li>
-            </ul>
+            <div class="milestone-timeline">
+                <div class="milestone-item">
+                    <div class="milestone-date">May 1</div>
+                    <p>PCB passes DRC and ERC (design &amp; electrical rules checker)</p>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-date">May 8</div>
+                    <p>3D printed design for enclosure case</p>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-date">May 22</div>
+                    <p>Working mobile app communicating with device over Bluetooth</p>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-date">May 24</div>
+                    <p>PCB successfully opens and closes blinds</p>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-date">May 29</div>
+                    <p>Full MVP system integration testing complete</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; SPR26 ECE196 Team</p>
+        <p>&copy; 2026 <strong>SPR26 ECE196 Team</strong> &nbsp;·&nbsp; UC San Diego</p>
     </footer>
 </body>
 </html>
