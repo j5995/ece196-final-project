@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCB — AutoBlinds</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div style="display: flex; align-items: center;">
+                <h1>AutoBlinds<span class="dot">.</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="team.html">Team</a>
+                <a href="problem.html">Problem</a>
+                <a href="solution.html">Solution</a>
+                <a href="pcb.html" class="active">PCB</a>
+                <a href="milestones.html">Milestones</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="fade-up">
+            <div class="section-head">
+                <div class="titles">
+                    <span class="section-num">07 / PCB</span>
+                    <h2>The printed circuit board.</h2>
+                </div>
+            </div>
+
+            <div class="prose fade-up delay-1" style="margin-bottom: 2.5rem;">
+                <p>The AutoBlinds PCB carries an <strong>ESP32 module</strong> for control and BLE, a <strong>TMC2209 stepper motor driver</strong> for the actuator, and screw terminal blocks for power and motor coils. Below: schematic, 2D board view, and 3D render.</p>
+            </div>
+        </section>
+
+        <!-- ─── 7.1 Schematic ─── -->
+        <section class="fade-up delay-2">
+            <div class="section-head" style="margin-bottom: 1.6rem;">
+                <div class="titles">
+                    <span class="section-num">7.1 / Schematic</span>
+                    <h2>Schematic.</h2>
+                </div>
+            </div>
+
+            <div class="annotated-figure fade-up delay-3">
+                <div style="position: relative; background: var(--paper); padding: 0;">
+                    <img src="assets/Schematic.png" alt="PCB schematic showing TMC2209 stepper driver and ESP32 pin headers" class="figure-img" style="object-fit: contain; padding: 1.5rem; max-height: 720px; width: 100%;">
+                    <span class="pin" style="top: 33%; left: 28%;">1</span>
+                    <span class="pin" style="top: 35%; left: 41%;">2</span>
+                    <span class="pin" style="top: 30%; left: 60%;">3</span>
+                    <span class="pin" style="top: 55%; left: 78%;">4</span>
+                </div>
+                <div class="figure-caption">
+                    <span class="label">Fig 7.1 / Schematic</span>
+                    <span class="text">Two main blocks: TMC2209 stepper driver subsystem on the left, and ESP32 pin-header / power input section on the right.</span>
+                </div>
+                <ol class="annotation-list">
+                    <li><span class="num">1</span><span><strong style="color:var(--ink)">TMC2209 stepper driver (U4)</strong> receives STEP/DIR signals and drives the motor coils via M1A/M1B/M2A/M2B</span></li>
+                    <li><span class="num">2</span><span><strong style="color:var(--ink)">Decoupling caps C7 (100 nF) &amp; C8 (100 µF)</strong> stabilize VM and 3.3 V rails near the driver</span></li>
+                    <li><span class="num">3</span><span><strong style="color:var(--ink)">Screw terminals J10 &amp; J11</strong> for VM/GND power input and motor coil output</span></li>
+                    <li><span class="num">4</span><span><strong style="color:var(--ink)">ESP32 pin headers J16 &amp; J17</strong> exposes IO pins, UART, and 3.3 V / 5 V / GND</span></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ─── 7.2 Board Layout ─── -->
+        <section class="fade-up delay-3">
+            <div class="section-head" style="margin-bottom: 1.6rem;">
+                <div class="titles">
+                    <span class="section-num">7.2 / Board layout</span>
+                    <h2>Board.</h2>
+                </div>
+            </div>
+
+            <div class="annotated-figure fade-up delay-4">
+                <div style="position: relative; background: var(--paper); padding: 0;">
+                    <img src="assets/Board.png" alt="PCB board layout — top copper view" class="figure-img" style="object-fit: contain; padding: 1.5rem; max-height: 820px; width: 100%;">
+                    <span class="pin" style="top: 47%; left: 53%;">1</span>
+                    <span class="pin" style="top: 79%; left: 50%;">2</span>
+                    <span class="pin" style="top: 79%; left: 33%;">3</span>
+                </div>
+                <div class="figure-caption">
+                    <span class="label">Fig 7.2 / Board layout</span>
+                    <span class="text">Top copper view. Pin headers run along both long edges; the ESP32 module sits in the middle of the board, with the stepper driver and screw terminals along the bottom.</span>
+                </div>
+                <ol class="annotation-list">
+                    <li><span class="num">1</span><span><strong style="color:var(--ink)">TMC2209 driver footprint</strong> surface-mount pads with R6 resistor and routing visible above</span></li>
+                    <li><span class="num">2</span><span><strong style="color:var(--ink)">Motor screw terminal (J11)</strong> which is a four position block exposing M1A / M1B / M2A / M2B coil connections</span></li>
+                    <li><span class="num">3</span><span><strong style="color:var(--ink)">Power input (J10)</strong> which is VM / GND screw terminal</span></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ─── 7.3 3D Render ─── -->
+        <section class="fade-up delay-4">
+            <div class="section-head" style="margin-bottom: 1.6rem;">
+                <div class="titles">
+                    <span class="section-num">7.3 / 3D render</span>
+                    <h2>3D view.</h2>
+                </div>
+            </div>
+
+            <div class="annotated-figure fade-up delay-5">
+                <div style="position: relative; background: var(--paper); padding: 0;">
+                    <img src="assets/3D-view.png" alt="PCB 3D rendered view" class="figure-img" style="object-fit: contain; padding: 1.5rem; max-height: 760px; width: 100%;">
+                    <span class="pin" style="top: 55%; left: 47%;">1</span>
+                    <span class="pin" style="top: 50%; left: 55%;">2</span>
+                    <span class="pin" style="top: 70%; left: 28%;">3</span>
+                    <span class="pin" style="top: 12%; left: 47%;">4</span>
+                </div>
+                <div class="figure-caption">
+                    <span class="label">Fig 7.3 / 3D render</span>
+                    <span class="text">Realistic view of the assembled board. Used to verify component clearance and mechanical fit inside the 3D printed enclosure.</span>
+                </div>
+                <ol class="annotation-list">
+                    <li><span class="num">1</span><span><strong style="color:var(--ink)">TMC2209 stepper driver</strong> through hole-mounted in the center of the board</span></li>
+                    <li><span class="num">2</span><span><strong style="color:var(--ink)">R6 and decoupling capacitors C7 / C8</strong> used for filtering and stabilizing the power supply</span></li>
+                    <li><span class="num">3</span><span><strong style="color:var(--ink)">Screw terminal blocks</strong> power input (VM / GND) and motor coils (M1A / M1B / M2A / M2B)</span></li>
+                    <li><span class="num">4</span><span><strong style="color:var(--ink)">"Team 4" silkscreen</strong> and pin numbering / labels printed in white silk</span></li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner" style="flex-direction: column; gap: 0;">
+            <div class="footer-logo">
+                <img src="assets/jacobs-logo.png" alt="UC San Diego Jacobs School of Engineering">
+                <div class="caption">Department of Electrical &amp; Computer Engineering</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; width: 100%;">
+                <div class="brand">AutoBlinds<span class="dot">.</span></div>
+                <div class="meta">SPR ’26 · ECE 196 · <strong>UC San Diego</strong></div>
+                <div class="meta">© 2026</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

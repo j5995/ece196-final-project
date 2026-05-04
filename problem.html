@@ -8,71 +8,110 @@
 </head>
 <body>
     <header>
-        <h1>AutoBlinds</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="team.html">Team</a>
-            <a href="problem.html">Problem</a>
-            <a href="solution.html">Solution</a>
-            <a href="block-diagram.html">Block Diagram</a>
-            <a href="milestones.html">Milestones</a>
-        </nav>
+        <div class="header-inner">
+            <div style="display: flex; align-items: center;">
+                <h1>AutoBlinds<span class="dot">.</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="team.html">Team</a>
+                <a href="problem.html" class="active">Problem</a>
+                <a href="solution.html">Solution</a>
+                <a href="pcb.html">PCB</a>
+                <a href="milestones.html">Milestones</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section class="problem">
-            <h2>Problem Definition</h2>
-            <p>UC San Diego students living in dorms, bedrooms, and shared spaces frequently use manually operated chain loop blinds — left in one position all day. This causes monitor glare, excessive heat, or rooms too dark that rely on artificial lighting.</p>
+        <section class="fade-up">
+            <div class="section-head">
+                <div class="titles">
+                    <span class="section-num">02 / Problem</span>
+                    <h2>The annoying blinds.</h2>
+                </div>
+            </div>
 
-            <div class="section-divider"></div>
+            <div class="prose fade-up delay-1">
+                <p>UC San Diego students living in dorms, bedrooms, and shared spaces typically use manually operated chain loop blinds which are left in one position all day. This causes monitor glare, excessive heat, or rooms too dark that rely on artificial lighting.</p>
+            </div>
+        </section>
 
-            <h2>Problem Motivation</h2>
-            <p>We've personally experienced the frustration of forgetting to adjust blinds. Poor lighting affects productivity, disrupts sleep patterns, and reduces overall quality of life — problems that a small piece of automation can completely eliminate.</p>
+        <section class="fade-up delay-2">
+            <div class="section-head">
+                <div class="titles">
+                    <span class="section-num">03 / Existing Solutions</span>
+                    <h2>What is already out there.</h2>
+                </div>
+                <p class="lead">Each existing option works (partially).</p>
+            </div>
 
-            <div class="section-divider"></div>
-
-            <h2>Existing Solutions</h2>
             <div class="comparison-grid">
-                <div class="comparison-card">
-                    <img src="assets/smart_blinds.jpg" alt="Smart Blinds">
-                    <h3>Smart Blinds</h3>
-                    <div class="tag-row">
-                        <span class="tag strength">Strengths</span>
+                <article class="comparison-card" data-label="01">
+                    <div class="card-img">
+                        <img src="assets/smart_blinds.jpg" alt="Commercial smart blinds">
                     </div>
-                    <ul class="strength-list">
-                        <li>Simple and intuitive to use</li>
-                        <li>Remote controllable</li>
-                    </ul>
-                    <div class="tag-row">
-                        <span class="tag weakness">Weaknesses</span>
+                    <div class="card-body">
+                        <h3>Commercial smart blinds</h3>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>Strengths</h4>
+                                <ul>
+                                    <li>Simple remote operation</li>
+                                    <li>Polished consumer experience</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>Limitations</h4>
+                                <ul>
+                                    <li>Requires replacing existing blinds</li>
+                                    <li>Rarely truly autonomous</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="weakness-list">
-                        <li>Requires manual setup</li>
-                        <li>Not autonomous</li>
-                    </ul>
-                </div>
-                <div class="comparison-card">
-                    <img src="assets/shades.jpeg" alt="Shades">
-                    <h3>Shades</h3>
-                    <div class="tag-row">
-                        <span class="tag strength">Strengths</span>
+                </article>
+
+                <article class="comparison-card" data-label="02">
+                    <div class="card-img">
+                        <img src="assets/shades.jpeg" alt="Roller shades">
                     </div>
-                    <ul class="strength-list">
-                        <li>Smooth, even light filtering</li>
-                        <li>Reduces glare effectively</li>
-                    </ul>
-                    <div class="tag-row">
-                        <span class="tag weakness">Weaknesses</span>
+                    <div class="card-body">
+                        <h3>Roller shades</h3>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>Strengths</h4>
+                                <ul>
+                                    <li>Smooth diffusion of light</li>
+                                    <li>Effective glare reduction</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>Limitations</h4>
+                                <ul>
+                                    <li>Binary — open or closed</li>
+                                    <li>Fabric degrades faster</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="weakness-list">
-                        <li>Poor granularity in light control</li>
-                        <li>Fabric degrades faster</li>
-                    </ul>
-                </div>
+                </article>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 <strong>SPR26 ECE196 Team</strong> &nbsp;·&nbsp; UC San Diego</p>
+        <div class="footer-inner" style="flex-direction: column; gap: 0;">
+            <div class="footer-logo">
+                <img src="assets/jacobs-logo.png" alt="UC San Diego Jacobs School of Engineering">
+                <div class="caption">Department of Electrical &amp; Computer Engineering</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; width: 100%;">
+                <div class="brand">AutoBlinds<span class="dot">.</span></div>
+                <div class="meta">SPR ’26 · ECE 196 · <strong>UC San Diego</strong></div>
+                <div class="meta">© 2026</div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

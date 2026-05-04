@@ -8,41 +8,74 @@
 </head>
 <body>
     <header>
-        <h1>AutoBlinds</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="team.html">Team</a>
-            <a href="problem.html">Problem</a>
-            <a href="solution.html">Solution</a>
-            <a href="block-diagram.html">Block Diagram</a>
-            <a href="milestones.html">Milestones</a>
-        </nav>
+        <div class="header-inner">
+            <h1>AutoBlinds<span class="dot">.</span></h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="team.html" class="active">Team</a>
+                <a href="problem.html">Problem</a>
+                <a href="solution.html">Solution</a>
+                <a href="block-diagram.html">System</a>
+                <a href="milestones.html">Milestones</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section class="problem" style="margin-bottom:2rem;">
-            <h2>Meet the Team</h2>
-            <p>Three Computer Engineering students at UC San Diego building smarter living spaces.</p>
-        </section>
-        <section class="team">
-            <div class="member">
-                <img src="assets/eric-image.jpeg" alt="Eric Wang">
-                <h2>Eric Wang</h2>
-                <p>Computer Engineering</p>
+        <section class="fade-up">
+            <div class="section-head">
+                <div class="titles">
+                    <span class="section-num">01 / Team</span>
+                    <h2>Our Team</h2>
+                </div>
             </div>
-            <div class="member">
-                <img src="assets/Yousif-image.jpg" alt="Yousif Alani">
-                <h2>Yousif Alani</h2>
-                <p>Computer Engineering</p>
-            </div>
-            <div class="member">
-                <img src="assets/mo-image.jpg" alt="Mo Hussen">
-                <h2>Mo Hussen</h2>
-                <p>Computer Engineering</p>
+
+            <div class="team-grid">
+                <article class="member fade-up delay-1">
+                    <div class="photo">
+                        <img src="assets/eric-image.jpeg" alt="Eric Wang">
+                    </div>
+                    <div class="info">
+                        <h3>Eric Wang</h3>
+                        <div class="major">Computer Engineering</div>
+                    </div>
+                </article>
+
+                <article class="member fade-up delay-2">
+                    <div class="photo">
+                        <img src="assets/Yousif-image.jpg" alt="Yousif Alani">
+                    </div>
+                    <div class="info">
+                        <h3>Yousif Alani</h3>
+                        <div class="major">Computer Engineering</div>
+                    </div>
+                </article>
+
+                <article class="member fade-up delay-3">
+                    <div class="photo">
+                        <img src="assets/mo-image.jpg" alt="Mo Hussen">
+                    </div>
+                    <div class="info">
+                        <h3>Mo Hussen</h3>
+                        <div class="major">Computer Engineering</div>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 <strong>SPR26 ECE196 Team</strong> &nbsp;·&nbsp; UC San Diego</p>
+        <div class="footer-inner" style="flex-direction: column; gap: 0;">
+            <div class="footer-logo">
+                <img src="assets/jacobs-logo.png" alt="UC San Diego Jacobs School of Engineering">
+                <div class="caption">Department of Electrical &amp; Computer Engineering</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; width: 100%;">
+                <div class="brand">AutoBlinds<span class="dot">.</span></div>
+                <div class="meta">SPR ’26 · ECE 196 · <strong>UC San Diego</strong></div>
+                <div class="meta">© 2026</div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

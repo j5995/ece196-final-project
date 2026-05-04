@@ -8,50 +8,134 @@
 </head>
 <body>
     <header>
-        <h1>AutoBlinds</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="team.html">Team</a>
-            <a href="problem.html">Problem</a>
-            <a href="solution.html">Solution</a>
-            <a href="block-diagram.html">Block Diagram</a>
-            <a href="milestones.html">Milestones</a>
-        </nav>
+        <div class="header-inner">
+            <div style="display: flex; align-items: center;">
+                <h1>AutoBlinds<span class="dot">.</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="team.html">Team</a>
+                <a href="problem.html">Problem</a>
+                <a href="solution.html">Solution</a>
+                <a href="pcb.html">PCB</a>
+                <a href="milestones.html" class="active">Milestones</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section class="problem">
-            <h2>Timeline</h2>
-            <img src="assets/timeline_figure.png" alt="Project Timeline Figure" style="width:100%;max-width:800px;height:auto;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow);margin-bottom:1rem;">
+        <section class="fade-up">
+            <div class="section-head">
+                <div class="titles">
+                    <span class="section-num">08 / Roadmap</span>
+                    <h2>Quarter-long build plan.</h2>
+                </div>
+                <p class="lead">Major class deliverables for final project. Status updated weekly as the quarter progresses.</p>
+            </div>
 
-            <div class="section-divider"></div>
+            <div class="timeline">
+                <article class="milestone" data-status="done">
+                    <div class="date">Week 04</div>
+                    <div class="body">
+                        <h4>PCB Block Diagram</h4>
+                        <p class="summary">Mapped out the major sub-systems — MCU, motor driver, sensor input, and power — before laying down any traces.</p>
+                        <span class="status-tag">Complete</span>
+                    </div>
+                </article>
 
-            <h2>Project Milestones</h2>
-            <div class="milestone-timeline">
-                <div class="milestone-item">
-                    <div class="milestone-date">May 1</div>
-                    <p>PCB passes DRC and ERC (design &amp; electrical rules checker)</p>
+                <article class="milestone" data-status="done">
+                    <div class="date">Week 05</div>
+                    <div class="body">
+                        <h4>PCB Design — Final Submission</h4>
+                        <p class="summary">First-draft schematic, board layout, and 3D model finalized and submitted for fabrication.</p>
+                        <span class="status-tag">Complete</span>
+                    </div>
+                </article>
+
+                <article class="milestone" data-status="current">
+                    <div class="date">Week 06</div>
+                    <div class="body">
+                        <h4>3D-Printed Enclosure</h4>
+                        <p class="summary">Housing for the stepper motor, PCB, and sensor module printed, fitted, and verified against existing blinds.</p>
+                        <span class="status-tag">In progress</span>
+                    </div>
+                </article>
+
+                <article class="milestone" data-status="upcoming">
+                    <div class="date">Week 08</div>
+                    <div class="body">
+                        <h4>Mobile App over Bluetooth</h4>
+                        <p class="summary">Companion app pairs with the ESP32 over BLE and reliably sends open / close / schedule commands.</p>
+                        <span class="status-tag">Upcoming</span>
+                    </div>
+                </article>
+
+                <article class="milestone" data-status="upcoming">
+                    <div class="date">Week 09</div>
+                    <div class="body">
+                        <h4>PCB Completion</h4>
+                        <p class="summary">Assembled board passes bring-up tests and successfully drives the stepper motor end-to-end.</p>
+                        <span class="status-tag">Upcoming</span>
+                    </div>
+                </article>
+
+                <article class="milestone" data-status="upcoming">
+                    <div class="date">Week 10</div>
+                    <div class="body">
+                        <h4>Final Poster &amp; Presentation</h4>
+                        <p class="summary">Project poster delivered and live-presented to the class on Demo Day.</p>
+                        <span class="status-tag">Upcoming</span>
+                    </div>
+                </article>
+
+                <article class="milestone" data-status="upcoming">
+                    <div class="date">Week 10</div>
+                    <div class="body">
+                        <h4>Demo Video</h4>
+                        <p class="summary">Edited demo footage showing the system reacting to live light changes and app commands.</p>
+                        <span class="status-tag">Upcoming</span>
+                    </div>
+                </article>
+
+                <article class="milestone" data-status="upcoming">
+                    <div class="date">Week 10</div>
+                    <div class="body">
+                        <h4>Final Website</h4>
+                        <p class="summary">All sections completed with real photos, schematics, video, and resources for future ECE 196 students.</p>
+                        <span class="status-tag">Upcoming</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ─── Pivots & deviations log ─── -->
+        <section class="fade-up delay-2" style="margin-top: 4rem;">
+            <div class="section-head">
+                <div class="titles">
+                    <span class="section-num">09 / Pivots</span>
+                    <h2>Notes &amp; deviations.</h2>
                 </div>
-                <div class="milestone-item">
-                    <div class="milestone-date">May 8</div>
-                    <p>3D printed design for enclosure case</p>
-                </div>
-                <div class="milestone-item">
-                    <div class="milestone-date">May 22</div>
-                    <p>Working mobile app communicating with device over Bluetooth</p>
-                </div>
-                <div class="milestone-item">
-                    <div class="milestone-date">May 24</div>
-                    <p>PCB successfully opens and closes blinds</p>
-                </div>
-                <div class="milestone-item">
-                    <div class="milestone-date">May 29</div>
-                    <p>Full MVP system integration testing complete</p>
-                </div>
+                <p class="lead">Where the plan changed, and why.</p>
+            </div>
+
+            <div class="prose fade-up delay-3">
+                <p><strong>No pivots logged yet.</strong> As the project evolves and we update the website each week, this section will track decisions where we deviated from the original plan so stuff like alternate motors, dropped features, schedule changes, or feedback we acted on from the website walkthrough reviews.</p>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 <strong>SPR26 ECE196 Team</strong> &nbsp;·&nbsp; UC San Diego</p>
+        <div class="footer-inner" style="flex-direction: column; gap: 0;">
+            <div class="footer-logo">
+                <img src="assets/jacobs-logo.png" alt="UC San Diego Jacobs School of Engineering">
+                <div class="caption">Department of Electrical &amp; Computer Engineering</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; width: 100%;">
+                <div class="brand">AutoBlinds<span class="dot">.</span></div>
+                <div class="meta">SPR ’26 · ECE 196 · <strong>UC San Diego</strong></div>
+                <div class="meta">© 2026</div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
