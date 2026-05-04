@@ -3,33 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoBlinds — ECE 196</title>
+    <title>AutoBlinds — UCSD ECE 196 · Spring 2026</title>
+    <meta name="description" content="AutoBlinds: smart, retrofittable automated blinds. UCSD ECE 196 final project, Spring 2026.">
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
     <header>
-        <h1>AutoBlinds</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="team.html">Team</a>
-            <a href="problem.html">Problem</a>
-            <a href="solution.html">Solution</a>
-            <a href="block-diagram.html">Block Diagram</a>
-            <a href="milestones.html">Milestones</a>
-        </nav>
+        <div class="header-inner">
+            <div style="display: flex; align-items: center;">
+                <h1>AutoBlinds<span class="dot">.</span></h1>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="team.html">Team</a>
+                <a href="problem.html">Problem</a>
+                <a href="solution.html">Solution</a>
+                <a href="pcb.html">PCB</a>
+                <a href="milestones.html">Milestones</a>
+            </nav>
+        </div>
     </header>
+
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <div class="hero-badge">ECE 196 · Spring 2026 · UCSD</div>
-                <h2>Smart Automated Blinds</h2>
-                <p>Automatically adapt your room's lighting — no more glare, no more forgotten blinds.</p>
-                <img src="assets/engpic.jfif" alt="Engineers working on a circuit board" class="hero-image">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <span class="eyebrow">ECE 196 · Spring 2026 · UCSD</span>
+                    <h2>Let the light<br>find you.</h2>
+                    <p>Smart retrofittable blinds that adapt to the sun, so you don't have to.</p>
+                    <div class="hero-meta">
+                        <div class="item">
+                            <span class="label">Course</span>
+                            <span class="value">ECE 196</span>
+                        </div>
+                        <div class="item">
+                            <span class="label">Quarter</span>
+                            <span class="value">SPR ’26</span>
+                        </div>
+                        <div class="item">
+                            <span class="label">Team</span>
+                            <span class="value">Four</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="window">
+                        <div class="window-scene"></div>
+                        <div class="blinds" aria-hidden="true">
+                            <div class="slat" style="--i: 0"></div>
+                            <div class="slat" style="--i: 1"></div>
+                            <div class="slat" style="--i: 2"></div>
+                            <div class="slat" style="--i: 3"></div>
+                            <div class="slat" style="--i: 4"></div>
+                            <div class="slat" style="--i: 5"></div>
+                            <div class="slat" style="--i: 6"></div>
+                            <div class="slat" style="--i: 7"></div>
+                            <div class="slat" style="--i: 8"></div>
+                            <div class="slat" style="--i: 9"></div>
+                            <div class="slat" style="--i: 10"></div>
+                            <div class="slat" style="--i: 11"></div>
+                            <div class="slat" style="--i: 12"></div>
+                            <div class="slat" style="--i: 13"></div>
+                        </div>
+                    </div>
+                    <div class="window-caption">
+                        <span>Window <span class="dim">/ open</span></span>
+                        <span class="dim">07:42 AM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Stats / Specs Bar ─── -->
+        <section class="stats-bar fade-up delay-3">
+            <div class="stat">
+                <div class="num">ESP<em>32</em></div>
+                <div class="label">Microcontroller</div>
+            </div>
+            <div class="stat">
+                <div class="num">TBD <em>min</em></div>
+                <div class="label">Install time</div>
+            </div>
+            <div class="stat">
+                <div class="num">5 <em>V</em></div>
+                <div class="label">Operating voltage</div>
+            </div>
+        </section>
+
+        <!-- ─── Project summary ─── -->
+        <section class="fade-up delay-4">
+            <div class="section-head">
+                <div class="titles">
+                    <span class="section-num">00 / Overview</span>
+                    <h2>The idea summarized.</h2>
+                </div>
+                <p class="lead">Read more on the Problem and Solution pages.</p>
+            </div>
+
+            <div class="summary-grid">
+                <article class="summary-card">
+                    <span class="badge">— Problem</span>
+                    <h3>Manual blinds get set and forgotten.</h3>
+                    <p>Most dorms and bedrooms have chain loop blinds that stay in one position all day leading to monitor glare, room overheating, and over reliance on lamps.</p>
+                </article>
+                <article class="summary-card dark">
+                    <span class="badge">— Solution</span>
+                    <h3>A small device that handles it.</h3>
+                    <p>An ESP32-driven module clips onto existing blinds and opens or closes them automatically based on light levels, schedules, or a tap from a mobile app.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ─── Final Deliverables (placeholders for video/poster) ─── -->
+        <section class="fade-up delay-5">
+            <div class="section-head">
+                <div class="titles">
+                    <span class="section-num">99 / Final deliverables</span>
+                    <h2>Coming Week 10.</h2>
+                </div>
+            </div>
+
+            <div class="deliverables-grid">
+                <div class="placeholder-box wide">
+                    <span class="ph-eyebrow">— Demo video</span>
+                </div>
+                <div class="placeholder-box tall">
+                    <span class="ph-eyebrow">— Project poster</span>
+                </div>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 <strong>SPR26 ECE196 Team</strong> &nbsp;·&nbsp; UC San Diego</p>
+        <div class="footer-inner" style="flex-direction: column; gap: 0;">
+            <div class="footer-logo">
+                <img src="assets/jacobs-logo.png" alt="UC San Diego Jacobs School of Engineering">
+                <div class="caption">Department of Electrical &amp; Computer Engineering</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; width: 100%;">
+                <div class="brand">AutoBlinds<span class="dot">.</span></div>
+                <div class="meta">SPR ’26 · ECE 196 · <strong>UC San Diego</strong></div>
+                <div class="meta">© 2026</div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,32 +1,80 @@
+<!-- ─── THIS FILE IS NO LONGER NEEDED ─── -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Block Diagram — AutoBlinds</title>
+    <title>System — AutoBlinds</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
     <header>
-        <h1>AutoBlinds</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="team.html">Team</a>
-            <a href="problem.html">Problem</a>
-            <a href="solution.html">Solution</a>
-            <a href="block-diagram.html">Block Diagram</a>
-            <a href="milestones.html">Milestones</a>
-        </nav>
+        <div class="header-inner">
+            <h1>AutoBlinds<span class="dot">.</span></h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="team.html">Team</a>
+                <a href="problem.html">Problem</a>
+                <a href="solution.html">Solution</a>
+                <a href="block-diagram.html" class="active">System</a>
+                <a href="milestones.html">Milestones</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section class="problem">
-            <h2>System Block Diagram</h2>
-            <p>High-level architecture showing how the ESP32, motor driver, photoresistor, and Bluetooth app interact.</p>
-            <img src="assets/blockdiagram.png" alt="Smart blinds system block diagram" class="block-diagram-img">
+        <section class="fade-up">
+            <div class="section-head">
+                <div class="titles">
+                    <span class="section-num">07 / Architecture</span>
+                    <h2>The system, at a glance.</h2>
+                </div>
+                <p class="lead">How the ESP32, motor driver, photoresistor, and Bluetooth app talk to each other.</p>
+            </div>
+
+            <div class="diagram-frame fade-up delay-1">
+                <img src="assets/blockdiagram.png" alt="AutoBlinds system block diagram">
+            </div>
+
+            <div class="diagram-legend fade-up delay-2">
+                <div class="legend-item">
+                    <span class="dot" style="background: var(--amber);"></span>
+                    <div>
+                        <h5>ESP32</h5>
+                        <p>Central microcontroller; BLE comms &amp; logic.</p>
+                    </div>
+                </div>
+                <div class="legend-item">
+                    <span class="dot" style="background: var(--rust);"></span>
+                    <div>
+                        <h5>Motor driver</h5>
+                        <p>Drives the actuator with controlled current.</p>
+                    </div>
+                </div>
+                <div class="legend-item">
+                    <span class="dot" style="background: var(--sage);"></span>
+                    <div>
+                        <h5>Photoresistor</h5>
+                        <p>Ambient-light sensing for auto-mode.</p>
+                    </div>
+                </div>
+                <div class="legend-item">
+                    <span class="dot" style="background: var(--ink);"></span>
+                    <div>
+                        <h5>Mobile app</h5>
+                        <p>Bluetooth control &amp; scheduling.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 <strong>SPR26 ECE196 Team</strong> &nbsp;·&nbsp; UC San Diego</p>
+        <div class="footer-inner">
+            <div class="brand">AutoBlinds<span class="dot">.</span></div>
+            <div class="meta">SPR ’26 · ECE 196 · <strong>UC San Diego</strong></div>
+        </div>
     </footer>
 </body>
 </html>

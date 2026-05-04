@@ -8,64 +8,124 @@
 </head>
 <body>
     <header>
-        <h1>AutoBlinds</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="team.html">Team</a>
-            <a href="problem.html">Problem</a>
-            <a href="solution.html">Solution</a>
-            <a href="block-diagram.html">Block Diagram</a>
-            <a href="milestones.html">Milestones</a>
-        </nav>
+        <div class="header-inner">
+            <div style="display: flex; align-items: center;">
+                <h1>AutoBlinds<span class="dot">.</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="team.html">Team</a>
+                <a href="problem.html">Problem</a>
+                <a href="solution.html" class="active">Solution</a>
+                <a href="pcb.html">PCB</a>
+                <a href="milestones.html">Milestones</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section class="problem">
-            <h2>Design Sketches &amp; CAD</h2>
-            <div class="image-grid">
-                <img src="assets/sketch1.png" alt="Sketch 1 — smart blinds system">
-                <img src="assets/sketch2.png" alt="Sketch 2 — CAD draft">
-                <img src="assets/motor.png" alt="Motor component">
+        <!-- ─── Section 04 — Design & CAD ─── -->
+        <section class="fade-up">
+            <div class="section-head">
+                <div class="titles">
+                    <span class="section-num">04 / Design &amp; CAD</span>
+                    <h2>From sketch to enclosure.</h2>
+                </div>
+                <p class="lead">3D modeled enclosure that mounts to existing blinds and contains the stepper motor, PCB, and gearing.</p>
             </div>
 
-            <div class="section-divider"></div>
+            <!-- Figure 4.1: Front-back view with annotations -->
+            <div class="annotated-figure fade-up delay-1" style="margin-bottom: 2rem;">
+                <div style="position: relative; background: var(--paper-2);">
+                    <img src="assets/sketch2.png" alt="CAD front-back view of enclosure" class="figure-img" style="object-fit: contain; padding: 2rem; max-height: 720px; width: 100%;">
+                    <span class="pin" style="top: 23%; left: 38.25%;">1</span>
+                    <span class="pin" style="top: 64%; left: 50%;">2</span>
+                    <span class="pin" style="top: 92%; left: 50%;">3</span>
+                </div>
+                <div class="figure-caption">
+                    <span class="label">Fig 4.1 / Top view</span>
+                    <span class="text">CAD render of the enclosure showing the cavity for the stepper motor and the gear that drives the chain loop.</span>
+                </div>
+                <ol class="annotation-list">
+                    <li><span class="num">1</span><span>M3 screw hole: used to hold the components in place</span></li>
+                    <li><span class="num">2</span><span>Stepper motor cavity: black box visible on the back face</span></li>
+                    <li><span class="num">3</span><span>Output gear &amp; shaft coupling that engages the chain loop</span></li>
+                </ol>
+            </div>
 
-            <h2>What It Does</h2>
-            <div class="feature-grid">
-                <div class="feature-chip">
-                    <span class="icon">🪟</span>
-                    Attaches to existing blinds
+            <!-- Figure 4.2: Isometric view -->
+            <div class="annotated-figure fade-up delay-2">
+                <div style="position: relative; background: var(--paper-2);">
+                    <img src="assets/sketch1.png" alt="CAD isometric view of enclosure" class="figure-img" style="object-fit: contain; padding: 2rem; max-height: 720px; width: 100%;">
+                    <span class="pin" style="top: 35%; left: 36%;">1</span>
+                    <span class="pin" style="top: 60%; left: 56%;">2</span>
+                    <span class="pin" style="top: 24%; left: 50%;">3</span>
                 </div>
-                <div class="feature-chip">
-                    <span class="icon">⚡</span>
-                    Opens &amp; closes automatically
+                <div class="figure-caption">
+                    <span class="label">Fig 4.2 / Isometric</span>
+                    <span class="text">3D view showing the photoresistor port (top), output gear face, and motor shaft.</span>
                 </div>
-                <div class="feature-chip">
-                    <span class="icon">📱</span>
-                    Manual or scheduled operation
+                <ol class="annotation-list">
+                    <li><span class="num">1</span><span>Photoresistor port: small slot on top face for ambient light sensing</span></li>
+                    <li><span class="num">2</span><span>Output gear teeth: engages the chain loop on the user's existing blinds</span></li>
+                    <li><span class="num">3</span><span>Ventilation slots: allows air to enter the enclosure and heat to escape</span></li>
+                    
+                </ol>
+            </div>
+        </section>
+
+        <!-- ─── Section 05 — Hardware ─── -->
+        <section class="fade-up delay-2">
+            <div class="section-head">
+                <div class="titles">
+                    <span class="section-num">05 / Hardware</span>
+                    <h2>The actuator.</h2>
+                </div>
+                <p class="lead">A NEMA 17-class stepper motor sized to drive the chain loop with controlled torque.</p>
+            </div>
+
+            <div class="annotated-figure fade-up delay-3">
+                <img src="assets/motor.jpg" alt="Stepper motor mechanical specification drawing" class="figure-img" style="object-fit: contain; padding: 2rem; max-height: 600px; width: 100%; background: var(--paper);">
+                <div class="figure-caption">
+                    <span class="label">Fig 5.1 / Spec sheet</span>
+                    <span class="text">Mechanical drawing of the stepper motor.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Section 06 — Block Diagram ─── -->
+        <section class="fade-up delay-3">
+            <div class="section-head">
+                <div class="titles">
+                    <span class="section-num">06 / Block diagram</span>
+                    <h2>How the everything interacts with each other.</h2>
                 </div>
             </div>
 
-            <div class="section-divider"></div>
-
-            <h2>Technology Stack</h2>
-            <div class="feature-grid">
-                <div class="feature-chip">
-                    <span class="icon">⚙️</span>
-                    Motor driver to control blinds
+            <div class="annotated-figure fade-up delay-4">
+                <div style="background: var(--paper); padding: 0;">
+                    <img src="assets/blockdiagram.png" alt="AutoBlinds system block diagram" class="figure-img" style="object-fit: contain; padding: 2rem; max-height: 700px; width: 100%;">
                 </div>
-                <div class="feature-chip">
-                    <span class="icon">📡</span>
-                    ESP32 via Bluetooth app
-                </div>
-                <div class="feature-chip">
-                    <span class="icon">💡</span>
-                    Photoresistor light sensing
+                <div class="figure-caption">
+                    <span class="label">Fig 6.1 / Block diagram</span>
+                    <span class="text">High level system architecture.</span>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 <strong>SPR26 ECE196 Team</strong> &nbsp;·&nbsp; UC San Diego</p>
+        <div class="footer-inner" style="flex-direction: column; gap: 0;">
+            <div class="footer-logo">
+                <img src="assets/jacobs-logo.png" alt="UC San Diego Jacobs School of Engineering">
+                <div class="caption">Department of Electrical &amp; Computer Engineering</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; width: 100%;">
+                <div class="brand">AutoBlinds<span class="dot">.</span></div>
+                <div class="meta">SPR ’26 · ECE 196 · <strong>UC San Diego</strong></div>
+                <div class="meta">© 2026</div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
