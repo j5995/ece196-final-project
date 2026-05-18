@@ -49,10 +49,10 @@
             <div class="annotated-figure fade-up delay-3">
                 <div style="position: relative; background: var(--paper); padding: 0;">
                     <img src="assets/Schematic.png" alt="PCB schematic showing TMC2209 stepper driver and ESP32 pin headers" class="figure-img" style="object-fit: contain; padding: 1.5rem; max-height: 720px; width: 100%;">
-                    <span class="pin" style="top: 33%; left: 28%;">1</span>
-                    <span class="pin" style="top: 35%; left: 41%;">2</span>
-                    <span class="pin" style="top: 30%; left: 60%;">3</span>
-                    <span class="pin" style="top: 55%; left: 78%;">4</span>
+                    <span class="pin-group" style="top: 33%; left: 28%;"><span class="pin">1</span><span class="pin-label">TMC2209</span></span>
+                    <span class="pin-group" style="top: 40%; left: 41%;"><span class="pin">2</span><span class="pin-label">Capacitors</span></span>
+                    <span class="pin-group" style="top: 32%; left: 60%;"><span class="pin">3</span><span class="pin-label">Screw terminals</span></span>
+                    <span class="pin-group" style="top: 55%; left: 78%;"><span class="pin">4</span><span class="pin-label">ESP32 headers</span></span>
                 </div>
                 <div class="figure-caption">
                     <span class="label">Fig 7.1 / Schematic</span>
@@ -60,7 +60,7 @@
                 </div>
                 <ol class="annotation-list">
                     <li><span class="num">1</span><span><strong style="color:var(--ink)">TMC2209 stepper driver (U4)</strong> receives STEP/DIR signals and drives the motor coils via M1A/M1B/M2A/M2B</span></li>
-                    <li><span class="num">2</span><span><strong style="color:var(--ink)">Decoupling caps C7 (100 nF) &amp; C8 (100 µF)</strong> stabilize VM and 3.3 V rails near the driver</span></li>
+                    <li><span class="num">2</span><span><strong style="color:var(--ink)">Decoupling capictors C7 (100 nF) &amp; C8 (100 µF)</strong> stabilize VM and 3.3 V rails near the driver</span></li>
                     <li><span class="num">3</span><span><strong style="color:var(--ink)">Screw terminals J10 &amp; J11</strong> for VM/GND power input and motor coil output</span></li>
                     <li><span class="num">4</span><span><strong style="color:var(--ink)">ESP32 pin headers J16 &amp; J17</strong> exposes IO pins, UART, and 3.3 V / 5 V / GND</span></li>
                 </ol>
@@ -79,9 +79,9 @@
             <div class="annotated-figure fade-up delay-4">
                 <div style="position: relative; background: var(--paper); padding: 0;">
                     <img src="assets/Board.png" alt="PCB board layout — top copper view" class="figure-img" style="object-fit: contain; padding: 1.5rem; max-height: 820px; width: 100%;">
-                    <span class="pin" style="top: 47%; left: 53%;">1</span>
-                    <span class="pin" style="top: 79%; left: 50%;">2</span>
-                    <span class="pin" style="top: 79%; left: 33%;">3</span>
+                    <span class="pin-group" style="top: 47%; left: 53%;"><span class="pin">1</span><span class="pin-label">TMC2209</span></span>
+                    <span class="pin-group" style="top: 79%; left: 50%;"><span class="pin">2</span><span class="pin-label">Motor terminal</span></span>
+                    <span class="pin-group" style="top: 79%; left: 33%;"><span class="pin">3</span><span class="pin-label">Power input</span></span>
                 </div>
                 <div class="figure-caption">
                     <span class="label">Fig 7.2 / Board layout</span>
@@ -107,10 +107,10 @@
             <div class="annotated-figure fade-up delay-5">
                 <div style="position: relative; background: var(--paper); padding: 0;">
                     <img src="assets/3D-view.png" alt="PCB 3D rendered view" class="figure-img" style="object-fit: contain; padding: 1.5rem; max-height: 760px; width: 100%;">
-                    <span class="pin" style="top: 55%; left: 47%;">1</span>
-                    <span class="pin" style="top: 50%; left: 55%;">2</span>
-                    <span class="pin" style="top: 70%; left: 28%;">3</span>
-                    <span class="pin" style="top: 12%; left: 47%;">4</span>
+                    <span class="pin-group" style="top: 55%; left: 47%;"><span class="pin">1</span><span class="pin-label">TMC2209</span></span>
+                    <span class="pin-group" style="top: 45%; left: 55%;"><span class="pin">2</span><span class="pin-label">Resistor</span></span>
+                    <span class="pin-group" style="top: 75%; left: 28%;"><span class="pin">3</span><span class="pin-label">Screw terminals</span></span>
+                    <span class="pin-group" style="top: 12%; left: 47%;"><span class="pin">4</span><span class="pin-label">Silkscreen</span></span>
                 </div>
                 <div class="figure-caption">
                     <span class="label">Fig 7.3 / 3D render</span>

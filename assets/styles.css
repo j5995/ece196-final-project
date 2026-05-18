@@ -1170,6 +1170,42 @@ footer strong { color: var(--sun); font-weight: 500; }
     background: var(--sun);
 }
 
+.pin-group {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    z-index: 2;
+}
+
+.pin-group .pin {
+    position: static;
+    transform: none;
+    flex-shrink: 0;
+}
+
+.pin-group .pin:hover {
+    transform: scale(1.15);
+}
+
+.pin-label {
+    font-family: var(--mono);
+    font-size: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: rgba(250, 245, 234, 0.88);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 0.1rem 0.28rem;
+    white-space: nowrap;
+    box-shadow: 0 1px 4px rgba(45, 33, 20, 0.18);
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+}
+
 .figure-caption {
     padding: 1rem 1.4rem;
     border-top: 1px solid var(--rule-soft);
