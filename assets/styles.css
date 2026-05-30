@@ -110,7 +110,7 @@ header::after {
 header h1 {
     font-family: var(--display);
     font-variation-settings: "opsz" 144, "SOFT" 30;
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     font-weight: 600;
     letter-spacing: -0.02em;
     color: var(--ink);
@@ -737,10 +737,30 @@ section {
 .feature-tile.dark:hover { border-color: var(--sun); }
 
 
+/* ... existing code ... */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Added for references page */
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    background: var(--paper);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    border: 1px solid var(--rule-soft);
+}
+
+section ul li a {
+    text-decoration: none;
+    color: var(--text-main);
 }
 
 .member {
