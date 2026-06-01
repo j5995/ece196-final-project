@@ -4,9 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prototype — AutoBlinds</title>
-    <meta name="description" content="AutoBlinds prototype page.">
+    <meta name="description" content="AutoBlinds app and prototype page.">
     <link rel="stylesheet" href="assets/styles.css">
+
+    <style>
+        .prototype-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .prototype-card {
+            background: var(--paper);
+            border: 1px solid var(--rule-soft);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .prototype-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .prototype-image {
+            background: var(--paper-2);
+            padding: 1rem;
+            border-bottom: 1px solid var(--rule-soft);
+        }
+
+        .prototype-image img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 16px;
+            display: block;
+        }
+
+        .prototype-image.app img {
+            object-fit: contain;
+            background: #eef5f8;
+        }
+
+        .prototype-body {
+            padding: 1.8rem 2rem 2rem;
+        }
+
+        .prototype-label {
+            font-family: var(--mono);
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--amber-deep);
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        .prototype-body h3 {
+            font-family: var(--display);
+            font-size: clamp(1.4rem, 2.4vw, 2rem);
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.025em;
+        }
+
+        .prototype-body p {
+            font-size: 1rem;
+            line-height: 1.65;
+            color: var(--shadow);
+        }
+
+        @media (max-width: 900px) {
+            .prototype-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .prototype-image img {
+                height: auto;
+                max-height: 520px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div class="header-inner">
@@ -32,13 +116,49 @@
             <div class="section-head">
                 <div class="titles">
                     <span class="section-num">11 / Prototype</span>
-                    <h2>Prototype in progress.</h2>
+                    <h2>App and physical prototype.</h2>
                 </div>
-                <p class="lead">This photo shows the current prototype setup and will be updated soon.</p>
+                <p class="lead">
+                    AutoBlinds combines a mobile BLE control app with a physical motorized blind attachment.
+                    The app sends open, close, and stop commands, while the prototype translates those commands
+                    into real movement on a standard chain-loop blind.
+                </p>
             </div>
 
-            <div class="placeholder-box wide" style="padding: 1rem;">
-                <img src="assets/prototype.jpg" alt="AutoBlinds prototype in progress" style="width: 100%; border-radius: 18px; display: block;">
+            <div class="prototype-grid">
+
+                <!-- App Card -->
+                <div class="prototype-card fade-up delay-1">
+                    <div class="prototype-image app">
+                        <img src="assets/app.png" alt="AutoBlinds mobile app interface">
+                    </div>
+                    <div class="prototype-body">
+                        <span class="prototype-label">Mobile App</span>
+                        <h3>BLE control interface.</h3>
+                        <p>
+                            The AutoBlinds app gives the user simple control over the blind motor.
+                            From the phone, the user can start opening, start closing, or stop the motor
+                            once the blinds reach the desired position.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Prototype Card -->
+                <div class="prototype-card fade-up delay-2">
+                    <div class="prototype-image">
+                        <img src="assets/prototype2.jpg" alt="AutoBlinds physical prototype attached to chain-loop blinds">
+                    </div>
+                    <div class="prototype-body">
+                        <span class="prototype-label">Physical Prototype</span>
+                        <h3>Motorized blind attachment.</h3>
+                        <p>
+                            The physical prototype mounts next to the dorm blind chain and uses a motor-driven
+                            sprocket to move the chain. This setup demonstrates how AutoBlinds can automate
+                            existing manual blinds without replacing the entire window system.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>

@@ -5,7 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>References & Help — AutoBlinds</title>
     <link rel="stylesheet" href="assets/styles.css">
+
+    <style>
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .help-card {
+            background: var(--paper);
+            border: 1px solid var(--rule-soft);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .help-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .help-label {
+            font-family: var(--mono);
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--amber-deep);
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        .help-card h3 {
+            font-family: var(--display);
+            font-size: clamp(1.25rem, 2vw, 1.7rem);
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.025em;
+        }
+
+        .help-card p {
+            font-size: 1rem;
+            line-height: 1.65;
+            color: var(--shadow);
+        }
+
+        @media (max-width: 900px) {
+            .help-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div class="header-inner">
@@ -33,14 +89,58 @@
                     <span class="section-num">12 / References</span>
                     <h2>References & Help We Got</h2>
                 </div>
+                <p class="lead">
+                    Throughout the AutoBlinds project, we received guidance from Instructional Assistants
+                    who helped us improve our CAD design, PCB decisions, part selection, soldering process,
+                    website, and overall project quality.
+                </p>
             </div>
-            <ul>
-                <li><a href="#">Reference 1</a></li>
-                <li><a href="#">Reference 2</a></li>
-                <li><a href="#">Reference 3</a></li>
-            </ul>
+
+            <div class="help-grid">
+
+                <article class="help-card fade-up delay-1">
+                    <span class="help-label">CAD Design</span>
+                    <h3>IA Ming</h3>
+                    <p>
+                        Ming helped our team with the CAD sketch for the AutoBlinds attachment and provided
+                        useful design tips throughout the project as we refined the physical structure.
+                    </p>
+                </article>
+
+                <article class="help-card fade-up delay-2">
+                    <span class="help-label">PCB & Physical Build</span>
+                    <h3>IA Korey</h3>
+                    <p>
+                        Korey helped us make important PCB design decisions and supported the physical build
+                        process, including practical guidance with soldering and hardware assembly.
+                    </p>
+                </article>
+
+                <article class="help-card fade-up delay-3">
+                    <span class="help-label">Parts & Project Quality</span>
+                    <h3>IA Juliana & IA Ferrari</h3>
+                    <p>
+                        Juliana and Ferrari helped us with part ordering decisions and gave feedback on how
+                        to improve the website, presentation quality, and overall final project output.
+                    </p>
+                </article>
+
+            </div>
         </section>
     </main>
 
+    <footer>
+        <div class="footer-inner" style="flex-direction: column; gap: 0;">
+            <div class="footer-logo">
+                <img src="assets/jacobs-logo.png" alt="UC San Diego Jacobs School of Engineering">
+                <div class="caption">Department of Electrical &amp; Computer Engineering</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; width: 100%;">
+                <div class="brand">AutoBlinds<span class="dot">.</span></div>
+                <div class="meta">SPR ’26 · ECE 196 · <strong>UC San Diego</strong></div>
+                <div class="meta">© 2026</div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
