@@ -307,26 +307,41 @@
         </div>
 
         <!-- ─── Tutorial 3 — Teammate placeholder ─── -->
-        <div class="tutorial-card fade-up delay-3">
+        <div class="tutorial-card fade-up delay-2">
             <div class="tutorial-card-body">
                 <span class="tutorial-card-eyebrow">Tutorial 03</span>
-                <h3 class="tutorial-card-title"><em>Your title here</em></h3>
-                <p class="tutorial-card-desc" style="color: var(--rule); font-style: italic;">
-                    [ Teammate — add your description here ]
+
+                <h3 class="tutorial-card-title">
+                    How a stepper motor works: A deep dive into the <em>Nema 17</em>
+                </h3>
+
+                <p class="tutorial-card-desc">
+                    This tutorial explains how a NEMA 17 stepper motor uses two electromagnetic coils to generate rotational movement, and why 4 pins are required to control it with an Arduino and driver board.
                 </p>
+
                 <ol class="tutorial-card-steps">
-                    <li><span class="step-num" style="background: var(--rule); color: var(--paper);">1</span><span style="color: var(--rule);">Step one</span></li>
-                    <li><span class="step-num" style="background: var(--rule); color: var(--paper);">2</span><span style="color: var(--rule);">Step two</span></li>
-                    <li><span class="step-num" style="background: var(--rule); color: var(--paper);">3</span><span style="color: var(--rule);">Step three</span></li>
+                    <li>
+                        <span class="step-num">1</span>
+                        <span>Understand how current flowing through Coil A and Coil B generates an electromagnetic force that moves the rotor.</span>
+                    </li>
+                    <li>
+                        <span class="step-num">2</span>
+                        <span>Learn why the motor needs 4 pins to allow current direction to be reversed in each coil.</span>
+                    </li>
+                    <li>
+                        <span class="step-num">3</span>
+                        <span>See how the Arduino and driver board sequence the coil energization to produce smooth, controlled rotation.</span>
+                    </li>
                 </ol>
+
                 <div class="tutorial-card-author">
-                    <span class="author-dot" style="background: var(--rule);"></span>
-                    By [Teammate Name] · [Topic]
+                    <span class="author-dot"></span>
+                    By Eric Wang · Stepper Motor Theory &amp; Coil Operation
                 </div>
             </div>
-            <div class="tutorial-card-image no-img">
-                <span class="ph-icon">🖼️</span>
-                <span class="ph-label">Add image here</span>
+
+            <div class="tutorial-card-image">
+                <img src="assets/coilmotor.jpeg" alt="ESP32, TMC2209, and NEMA 17 stepper motor setup">
             </div>
         </div>
 
